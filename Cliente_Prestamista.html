@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard del Cliente - Banco de Agricultura Salvadoreño</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .account-list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .account-card {
+            background-color: #ecf0f1;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            width: calc(33% - 10px);
+        }
+        .transactions {
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #2c3e50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido, [Nombre del Cliente]</h1>
+        
+        <h2>Mis Cuentas</h2>
+        <div class="account-list">
+            <div class="account-card">
+                <h3>Cuenta de Ahorros</h3>
+                <p>Número: XXXX-XXXX-1234</p>
+                <p>Saldo: $5,000.00</p>
+            </div>
+            <div class="account-card">
+                <h3>Cuenta Corriente</h3>
+                <p>Número: XXXX-XXXX-5678</p>
+                <p>Saldo: $2,500.00</p>
+            </div>
+            <div class="account-card">
+                <h3>Agregar Nueva Cuenta</h3>
+                <p>(Límite: 3 cuentas)</p>
+                <button>Crear Cuenta</button>
+            </div>
+        </div>
+        
+        <div class="transactions">
+            <h2>Movimientos Recientes</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Descripción</th>
+                        <th>Monto</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-09-14</td>
+                        <td>Depósito ATM</td>
+                        <td>$500.00</td>
+                        <td>Depósito</td>
+                    </tr>
+                    <tr>
+                        <td>2024-09-13</td>
+                        <td>Transferencia a Juan Pérez</td>
+                        <td>$200.00</td>
+                        <td>Transferencia</td>
+                    </tr>
+                    <tr>
+                        <td>2024-09-12</td>
+                        <td>Retiro en Cajero</td>
+                        <td>$100.00</td>
+                        <td>Retiro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

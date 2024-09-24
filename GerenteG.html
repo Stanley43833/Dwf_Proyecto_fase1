@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard del Gerente General - Banco de Agricultura Salvadoreño</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #2c3e50;
+            color: white;
+        }
+        .action-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+        .approve-button {
+            background-color: #2ecc71;
+        }
+        .reject-button {
+            background-color: #e74c3c;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Panel de Gerente General</h1>
+        
+        <h2>Acciones de Personal Pendientes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Rol</th>
+                    <th>Sucursal</th>
+                    <th>Acción</th>
+                    <th>Decisión</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Luis Hernández</td>
+                    <td>Cajero</td>
+                    <td>Central</td>
+                    <td>Nueva Contratación</td>
+                    <td>
+                        <button class="action-button approve-button">Aprobar</button>
+                        <button class="action-button reject-button">Rechazar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ana Gómez</td>
+                    <td>Asesor Financiero</td>
+                    <td>Norte</td>
+                    <td>Promoción</td>
+                    <td>
+                        <button class="action-button approve-button">Aprobar</button>
+                        <button class="action-button reject-button">Rechazar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <h2>Gestión de Sucursales</h2>
+        <form>
+            <div class="form-group">
+                <label for="branchName">Nombre de la Nueva Sucursal:</label>
+                <input type="text" id="branchName" name="branchName" required>
+            </div>
+            <div class="form-group">
+                <label for="branchLocation">Ubicación:</label>
+                <input type="text" id="branchLocation" name="branchLocation" required>
+            </div>
+            <div class="form-group">
+                <label for="branchManager">Gerente Asignado:</label>
+                <select id="branchManager" name="branchManager">
+                    <option value="">Seleccionar Gerente</option>
+                    <option value="1">María Rodríguez</option>
+                    <option value="2">Carlos López</option>
+                    <option value="3">Sofia Mendoza</option>
+                </select>
+            </div>
+            <button type="submit" class="action-button">Crear Nueva Sucursal</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <h2>Movimientos de Cuentas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Cuenta</th>
+                    <th>Sucursal</th>
+                    <th>Tipo</th>
+                    <th>Monto</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024-09-16</td>
+                    <td>1234-5678</td>
+                    <td>Central</td>
+                    <td>Depósito</td>
+                    <td>$1,000.00</td>
+                </tr>
+                <tr>
+                    <td>2024-09-15</td>
+                    <td>8765-4321</td>
+                    <td>Norte</td>
+                    <td>Retiro</td>
+                    <td>$500.00</td>
+                </tr>
+                <tr>
+                    <td>2024-09-15</td>
+                    <td>9876-5432</td>
+                    <td>Independiente</td>
+                    <td>Transferencia</td>
+                    <td>$2,000.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
